@@ -216,12 +216,12 @@ client.focused #000000 #17202A #EAECEE #EAECEE
 # smart_gaps on
 # smart_borders on
 
-for_window [class="^.*"] border pixel 2
+for_window [class="^.*"] border pixel 1
 exec feh --bg-fill /home/juan/Downloads/R.png
 exec picom -b -f
 
 assign [class="^Spotify*"] $ws5
-assign [class="code"] $ws4
+assign [class="^Code*"] $ws4
 
 # Change output
 bindsym $mod+mod1+j exec /home/juan/.config/dmenu/monitors.sh
