@@ -45,6 +45,12 @@ bindsym F4 exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle &&
 bindsym F5 exec brightnessctl set 2%-
 bindsym F6 exec brightnessctl set +2%
 
+# Screenshot full screen with flameshot
+bindsym $mod+Shift+s exec flameshot full -p ~/Screenshots
+
+# Screenshot selected area with flameshot
+bindsym $mod+Shift+a exec flameshot gui
+
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 

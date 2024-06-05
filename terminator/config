@@ -3,11 +3,10 @@
   zoom_in = <Primary>equal
 [profiles]
   [[default]]
-    background_color = "#2E3440"
     background_darkness = 0.75
     background_type = transparent
     font = Cantarell Bold 10
-    foreground_color = "#D8DEE9"
+    foreground_color = "#d8dee9"
     show_titlebar = False
     scrollbar_position = hidden
     scroll_on_output = True
