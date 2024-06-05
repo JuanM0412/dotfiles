@@ -217,7 +217,7 @@ client.focused #000000 #17202A #EAECEE #EAECEE
 # smart_borders on
 
 for_window [class="^.*"] border pixel 1
-exec feh --bg-fill /home/juan/Downloads/R.png
+exec feh --bg-fill /home/juan/Wallpapers/evangelion.jpg
 exec picom -b -f
 
 assign [class="^Spotify*"] $ws5
