@@ -15,7 +15,6 @@ interval=1
 markup=pango
 border=#1ED760
 color=#1ED760
-label=<span color="#1ED760"> </span>
 
 [arch_update]
 command=checkupdates | wc -l
