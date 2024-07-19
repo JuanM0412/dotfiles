@@ -15,7 +15,7 @@ interval=1
 markup=pango
 border=#1ED760
 color=#1ED760
-label=<span color="#1ED760"></span>
+label=<span color="#1ED760"> </span>
 
 [arch_update]
 command=checkupdates | wc -l
@@ -29,9 +29,9 @@ border_top=1
 command=iwgetid -r | tr '\n' ' ' && grep $(iwgetid -m | awk '{ printf "%s", $1 }') /proc/net/wireless | awk '{ printf "%i%\n", int($3 * 100 / 70) }'
 instance=wlp11s0f3u1
 interval=5
-label=<span color="#ff79c6"> </span>
-border=#ff79c6
-color=#ff79c6
+label=<span color="#FF79C9"> </span>
+border=#FF79C6
+color=#FF79C6
 border_top=1
 border_right=0
 border_bottom=0
@@ -65,8 +65,8 @@ interval=30
 border=#FFFFFF
 
 [date]
-command=date +"%Y, %B %d %A - %I:%M:%S"
+command=date +"%B %d %A - %I:%M:%S"
 interval=1
-border=#bd93f9
-color=#bd93f9
+border=#BD93F9
+color=#BD93F9
 border_top=1
