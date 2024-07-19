@@ -3,7 +3,6 @@
   zoom_in = <Primary>equal
 [profiles]
   [[default]]
-    background_darkness = 0.75
     background_type = transparent
     font = Cantarell Bold 10
     foreground_color = "#d8dee9"

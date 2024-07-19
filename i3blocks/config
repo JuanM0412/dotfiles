@@ -1,91 +1,62 @@
-# i3blocks configuration file
-#
-# The i3blocks man page describes the usage of the binary,
-# and its website describes the configuration:
-#
-#     https://vivien.github.io/i3blocks
-
-
 # Global properties
-separator=true
-separator_block_width=18
-
+separator=false
+separator_block_width=15
 align=center
 markup=pango
-border_top=0
-border_bottom=3
+border_top=1
+border_bottom=0
 border_left=0
 border_right=0
-color=#FFFFFF
-
-[pacman-updates]
-#command="$HOME"/.config/i3blocks/pac-update.py
-command=$HOME/.config/i3blocks/checkupdates.sh
-markup=pango
-interval=3600
-QUIET=true
-WATCH=^linux.* ^pacman.* ^emacs.*
-color=#48C9B0
-BASE_COLOR=#48C9B0
-UPDATE_COLOR=#48C9B0
-AUR=true
-LABEL= 
-signal=3
+color=#F8F8F2
 
 [spotify]
 command=$HOME/.config/i3blocks/spotify
 interval=1
 markup=pango
-color=#1ED760
 border=#1ED760
+color=#1ED760
+label=<span color="#1ED760"></span>
+
+[arch_update]
+command=checkupdates | wc -l
+interval=once
+label=<span color="#1793d1"> </span>
+border=#1793D1
+color=#1793D1
+border_top=1
+
+[wifi]
+command=iwgetid -r | tr '\n' ' ' && grep $(iwgetid -m | awk '{ printf "%s", $1 }') /proc/net/wireless | awk '{ printf "%i%\n", int($3 * 100 / 70) }'
+instance=wlp11s0f3u1
+interval=5
+label=<span color="#ff79c6"> </span>
+border=#ff79c6
+color=#ff79c6
+border_top=1
+border_right=0
+border_bottom=0
+border_left=0
 
 [cpu]
 command=$HOME/.config/i3blocks/cpu
 interval=persist
-markup=pango
-color=#DFD932
-border=#DFD912
+border=#FF5555
+color=#FF5555
 min_width=25
-label=
-
-[temperature]
-command=$HOME/.config/i3blocks/temperature 
-interval=5
-label=
-border=#FFFFFF
-#T_WARN=70
-#T_CRIT=90
-#SENSOR_CHIP=""
+label=<span color="#FF5555"><b>CPU:</b></span>
 
 [memory]
 command=$HOME/.config/i3blocks/memory
 interval=5
-color=#52AEFF
 border=#52AEFF
-
-[ip]
-#command=hostname -i | awk '{ print "IP:" $1 }'
-command=ip addr | grep 192 | awk '{print $2}' | sed 's/\/.*//g'
-interval=60
-color=#A569BD
-border=#A569BD
+color=#52AEFF
 
 [volume]
 command=$HOME/.config/i3blocks/volume
-LABEL=♪ 
-#LABEL=VOL
+LABEL=<span color="#FFB86C"><b> </b></span>
 interval=1
-color=#FFA252
-border=#FF7752
-#STEP=5%
-#MIXER=[determined automatically]
-#SCONTROL=[determined automatically]
-#NATURAL_MAPPING=0
-
-#[connection]
-#command=nmcli device wifi list | grep '*' | awk '{print $3}'
-#interval=once
-##border=#9F78E1
+border=#FFB86C
+color=#FFB86C
 
 [battery]
 command=$HOME/.config/i3blocks/battery
@@ -93,6 +64,9 @@ markup=pango
 interval=30
 border=#FFFFFF
 
-[time]
-command=date +'%d-%m-%Y %H:%M'
+[date]
+command=date +"%Y, %B %d %A - %I:%M:%S"
 interval=1
+border=#bd93f9
+color=#bd93f9
+border_top=1
