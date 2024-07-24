@@ -51,8 +51,8 @@ border=#52AEFF
 color=#52AEFF
 
 [volume]
-command=$HOME/.config/i3blocks/volume
-LABEL=<span color="#FFB86C"><b> </b></span>
+command=pulseaudio-ctl full-status | awk '{ printf "%i<span color=\"#FFB86C\">%</span>\n", $1 }'
+label=<span color="#FFB86C"> </span>
 interval=1
 border=#FFB86C
 color=#FFB86C
