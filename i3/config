@@ -242,6 +242,7 @@ exec --no-startup-id setxkbmap -layout us -variant intl
 
 # Touchpad
 exec xinput set-prop "MSFT0002:00 04F3:31B8 Touchpad" "libinput Tapping Enabled" 1
+exec xset m 26/10 4
 
 # pcmanfm
 bindsym $mod+Shift+e exec pcmanfm
