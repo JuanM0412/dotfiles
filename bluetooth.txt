@@ -1,0 +1,8 @@
+bluetoothctl
+power on
+agent on
+default-agent
+scan on
+pair DC:2C:26:DA:2C:32
+connect DC:2C:26:DA:2C:32
+trust DC:2C:26:DA:2C:32
