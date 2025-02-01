@@ -228,7 +228,7 @@ client.background       #F8F8F2
 # smart_borders on
 
 for_window [class="^.*"] border pixel 1
-exec feh --bg-fill /home/juan/Wallpapers/vinland_saga.png
+exec feh --bg-fill --randomize /home/juan/.config/wallpapers/Desktop/*
 exec picom -b -f
 
 assign [class="^Spotify*"] $ws5
