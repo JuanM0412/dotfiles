@@ -233,6 +233,7 @@ exec picom -b -f
 
 assign [class="^Spotify*"] $ws5
 assign [class="^Code*"] $ws4
+assign [class="^Google-chrome$"] $ws1
 
 # Change output
 bindsym $mod+mod1+s exec /home/juan/.config/dmenu/monitors.sh
@@ -243,6 +244,9 @@ exec --no-startup-id setxkbmap -layout us -variant intl
 # Touchpad
 exec xinput set-prop "MSFT0002:00 04F3:31B8 Touchpad" "libinput Tapping Enabled" 1
 exec xset m 26/10 4
+
+# chrome
+bindsym $mod+Shift+c exec google-chrome-stable
 
 # pcmanfm
 bindsym $mod+Shift+e exec pcmanfm
